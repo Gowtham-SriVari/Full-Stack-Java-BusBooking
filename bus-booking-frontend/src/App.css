@@ -1,0 +1,618 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Navbar */
+
+.navbar {
+  background: 	#c36889;
+  color: white;
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Home */
+
+.home {
+  min-height: 90vh;
+
+}
+
+.hero-section img{
+  width: 300px;
+  height: 200px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #dfeaf5;
+}
+
+.hero h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #91254c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+}
+
+/* Forms */
+
+.form-container {
+  width: 400px;
+  margin: 60px auto;
+}
+
+.form-container form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #91254c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Pages */
+
+.page-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.page-container h2 {
+  margin-bottom: 25px;
+}
+
+.search-form {
+  background: white;
+  padding: 20px;
+
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 30px;
+
+  border-radius: 8px;
+}
+
+.search-form input {
+  margin-bottom: 0;
+}
+
+/* Bus cards */
+
+.bus-list {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 20px;
+}
+
+.bus-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.1);
+}
+
+.bus-card h3 {
+  margin-bottom: 15px;
+}
+
+.bus-card p {
+  margin-bottom: 8px;
+}
+
+.bus-card h4 {
+  margin: 15px 0;
+}
+
+/* Booking */
+
+.booking-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.1);
+}
+
+.booking-card p {
+  margin: 8px 0;
+}
+
+/* Admin */
+
+.admin-form {
+  background: white;
+  padding: 25px;
+  margin-bottom: 40px;
+
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.admin-form button {
+  width: 150px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .admin-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bus-details {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+
+.bus-details h3 {
+  margin-bottom: 10px;
+}
+
+.seat-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.seat {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #e5e7eb;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.seat:hover {
+  background: #d1d5db;
+}
+
+.seat.selected {
+  background: #36577f;
+  color: white;
+  border-color: #36577f;
+}
+
+.booking-summary {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+
+.booking-summary p {
+  margin: 8px 0;
+}
+
+.booking-summary h3 {
+  margin-top: 15px;
+}
+
+.primary-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #aa476b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+}
+
+.home-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.hero-section {
+  padding: 70px 30px;
+  text-align: center;
+  background: #aa476b;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.available-buses {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 25px;
+}
+
+.available-buses h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.bus-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 25px;
+}
+
+.bus-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bus-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.bus-card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.bus-price {
+  font-size: 24px !important;
+  font-weight: bold;
+  margin: 20px 0 !important;
+}
+
+.primary-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #aa476b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.admin-sidebar {
+  width: 230px;
+  min-height: 100vh;
+  padding: 25px 15px;
+  background: #aa476b;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.admin-sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 13px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.admin-sidebar a:hover {
+  background: #aa476b;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 35px;
+}
+
+.admin-page h1 {
+  margin-bottom: 30px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  );
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h3 {
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.admin-form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.admin-form button {
+  margin-right: 10px;
+}
+
+.admin-table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.admin-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table-container th,
+.admin-table-container td {
+  padding: 13px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.admin-table-container th {
+  background: #f1f3f5;
+}
+
+.admin-table-container button {
+  padding: 8px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* District dropdown */
+
+.district-select {
+  position: relative;
+  width: 100%;
+}
+
+.district-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.district-option {
+  padding: 12px 15px;
+  cursor: pointer;
+  background: white;
+}
+
+.district-option:hover {
+  background: #f1f1f1;
+}
+
+.district-select {
+  position: relative;
+  width: 100%;
+}
+
+.district-select input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.district-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.district-option {
+  padding: 12px 15px;
+  cursor: pointer;
+  background: white;
+}
+
+.district-option:hover {
+  background: #f2f2f2;
+}
